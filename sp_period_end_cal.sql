@@ -24,7 +24,7 @@ and a.paid_id=b.paid_id;
 
 /*Code added here*/
 insert into expense_summary(amount,period_id,paid_id)
-select sum(pp.total) as total ,pp.period_id,pp.paid_id from credit pp
+select sum(-pp.total) as total ,pp.period_id,pp.paid_id from credit pp
 where not exists (select * from total cc where cc.paid_id =pp.paid_id)
 group by pp.paid_id,pp.period_id;
 /*Ends here*/
