@@ -1,0 +1,6 @@
+host=XXXXX
+port=XXXX
+username=XXXX
+password=XXXX
+src_file1=D:\temp\ledger.csv
+src_file2=D:\temp\misc_credit.csv
