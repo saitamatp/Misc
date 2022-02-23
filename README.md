@@ -1,3 +1,6 @@
 # stored_procedures
-Contains all the SP.
-1.Period end SP reads data period wise and calculates the sum
+
+## This repository contains necessary contents for the code from other repo in my profile
+
+* Contains SP for period end calculation (credit load)
+* Contains the basic structure of prm file (credit_load,csv_mysql,load_base)  
