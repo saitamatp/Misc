@@ -1,18 +1,18 @@
 CREATE DEFINER
-=`Kat`@`%` PROCEDURE `sp_period_end_cal`
+=`User`@`%` PROCEDURE `sp_period_end_cal`
 ()
-sp:
-BEGIN
-    SET @period_id  = ((select Period_id
-    from ledger.period_detail c
-    where curdate() between c.Starting_from and c.Ending_on)-1);
+sp:BEGIN
 
-    set @count_record=(select period_id
-    from ledger.expense_summary
-    where period_id=@period_id
-    group by period_id);
+SET @period_id  = ((select Period_id
+from ledger.period_detail c
+where curdate() between c.Starting_from and c.Ending_on)-1);
 
-    if @count_record is not null then
+set @count_record=(select period_id
+from ledger.expense_summary
+where period_id=@period_id
+group by period_id);
+
+if @count_record is not null then
 
     set @id=(select max(id)
     from error_message.sp_period_end_cal);
