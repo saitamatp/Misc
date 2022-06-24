@@ -1,4 +1,4 @@
-# Paremter and Contents for other repositories
+# Parameter and Contents for other repositories
 
 ## This repository contains necessary contents for the code from other repo in my profile
 
